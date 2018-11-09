@@ -1,0 +1,35 @@
+@font-face {
+  font-family: signal-heavy;
+  src: url(fonts/Signal-Heavy.ttf);
+}
+/* General Page Rules */
+
+body {
+  color: red;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Navigation */
+#nav {
+}
+
+#navigation {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.navtabs {
+  background-color: black;
+  margin: 10px 10px;
+  flex-grow: 1;
+  text-align: center;
+  list-style-type: none;
+}
+
+#navtabs {
+  font-family: signal-heavy;
+}

@@ -11,10 +11,12 @@
   height:500px;
   width:500px;
 }
+
 @font-face {
   font-family: signal-heavy;
   src: url(fonts/Signal-Heavy.ttf);
 }
+
 #heading {
  
 }
@@ -22,11 +24,13 @@
 
 body {
   color: black;
+
 }
 
 a {
   text-decoration: none;
 }
+
 .slides {
 	display:none;
  
@@ -41,6 +45,7 @@ p {
 /* Navigation */
 #nav {
   color:white;
+
 
 }
 

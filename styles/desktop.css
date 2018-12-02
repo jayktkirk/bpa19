@@ -1,3 +1,4 @@
+
 .container {
   display:grid;
   grid-template-columns:1fr 1fr 1fr 1fr;
@@ -17,10 +18,12 @@
   grid-row:auto;
   grid-column:3/5;
 }
+
 @font-face {
   font-family: signal-heavy;
   src: url(fonts/Signal-Heavy.ttf);
 }
+
 #heading {
   grid-column:1/5;
   grid-row:2/4;
@@ -29,11 +32,13 @@
 
 body {
   color: black;
+
 }
 
 a {
   text-decoration: none;
 }
+
 .slides {
 	display:none;
   grid-column:1/5;
@@ -49,6 +54,7 @@ p {
 /* Navigation */
 #nav {
   color:white;
+
 
 }
 

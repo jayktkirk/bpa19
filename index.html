@@ -3,23 +3,26 @@
   <head>
     <meta charset="utf-8">
     <title>Washington D.C.</title>
-    <link rel="stylesheet" href="styles/mobile.css" media="screen and (min-width: 1440px)" type="text/css" />
-    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 1441px)" type="text/css" />
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 1025px)" type="text/css" />
+    <link rel="stylesheet" href="styles/desktop.css" media="screen and (min-width: 1026px)" type="text/css" /> 
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   </head>
   <body>
+  	<div class="container">
     <header>
 
   <!-- Desktop Nav  -->
     <div id="desktop-nav">
       <nav id="nav">
         <ul id="navigation">
-          <li class="navtabs"><a id="navtabs" href="#">Home</a></li>
+        	 <li> <img src="images/bpalogo.png"></li>
+          <li class="navtabs"><a id="navtabs" href="index.html">Home</a></li>
           <li class="navtabs"><a id="navtabs" href="#">Convention Information</a></li>
-          <li class="navtabs"><a id="navtabs" href="#">Monuments</a></li>
+          <li class="navtabs"><a id="navtabs" href="monuments.html">Monuments</a></li>
           <li class="navtabs"><a id="navtabs" href="#">Restaurants</a></li>
           <li class="navtabs"><a id="navtabs" href="#">Hotels</a></li>
           <li class="navtabs"><a id="navtabs" href="#">Transportation</a></li>
+      </ul>
       </nav>
     </div>
 
@@ -38,7 +41,51 @@
 
     </header>
     <div id="heading">
-      <h1>Welcome to Washington D.C.</h1>
+        <div class="w3-content w3-section" style="max-width:1000px">
+          <img class = "slides" src = "images/washington4.jpg" style="width:100%">
+          <div class = "w3-display-middle">
+            <p class="head">Welcome to Washington D.C.</p>
+          </div>
+        </div>
+        <div class="w3-content w3-section" style="max-width:1000px">
+          <img class = "slides" src = "images/washington5.jpg" style="width:100%">
+          <div class = "w3-display-middle">
+           <p class="head"> Welcome to Washington D.C.</p>
+          </div>
+        </div>
+        <div class="w3-content w3-section" style="max-width:1000px">
+          <img class = "slides" src = "images/washington6.jpg" style="width:100%">
+          <div class = "w3-display-middle">
+            <p class="head">Welcome to Washington D.C.</p>
+          </div>
+        </div>
     </div>
+    <section class="text_home">
+    	<h3>Congratulations for making it to the National Leadership Convention for the Business Professionals of America.</h3>
+
+		<p>Over the next few days there will be many competitions. During your down time I hope you get a chance to explore this wonderful city. Washington DC is a city unlike any other. Plan your time in the nations capitol well. There are many things to do and see free of charge, colorful places to eat and so much to experience all in one place.</p>
+		<p>Please review all of the competition information before arrival. Pay attention to times and locations of all events. Please arrive in appropriate attire.</p>
+
+		<p>Good Luck to all of you and see you soon!</p>
+	</section>
+
+
+    <script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("slides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 4000); // Change image every 4 seconds
+}
+</script>
+  </div>
   </body>
 </html>

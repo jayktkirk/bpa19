@@ -50,9 +50,20 @@
     </p>
     </section> 
 
-    <section class = "map">
-      <iframe src="https://www.google.com/maps/place/Washington,+DC/@38.8978227,-77.0868323,11.75z/data=!4m5!3m4!1s0x89b7c6de5af6e45b:0xc2524522d4885d2a!8m2!3d38.9071923!4d-77.0368707 &amp;output=embeded" width="500" height="500"></iframe>
-    </section>
+    <div id= "map">
+    
+    </div>
   </div>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIGF0x3jXn_SE3PmvYk5e8YTO9bWwa-NI&callback=initMap">
+ var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 38.902, long: -77.089},
+          zoom: 8
+        });
+      }
+
+  </script> 
   </body>
 </html>

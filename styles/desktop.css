@@ -1,10 +1,17 @@
 .container {}
 
-.text {}
+.text {
+    margin: 50px;
+}
 
-.text_home {}
+.text_home {
+    margin: 50px;
+}
 
-#map {}
+#map {
+    height: 500px;
+    width: 500px;
+}
 
 @font-face {
     font-family: signal-heavy;
@@ -47,10 +54,10 @@ p {
     display: flex;
     justify-content: center;
     flex-direction: row;
+    background-color: black;
 }
 
 .navtabs {
-    background-color: black;
     margin: 10px 10px;
     flex-grow: 1;
     text-align: center;

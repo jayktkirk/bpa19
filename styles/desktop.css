@@ -1,4 +1,6 @@
+.container {
 
+}
 .text {
   margin:50px;
 }
@@ -18,7 +20,7 @@
 }
 
 #heading {
- 
+  
 }
 /* General Page Rules */
 
@@ -50,6 +52,10 @@ footer {
   color:#D2BE96;
   padding:5px;
 }
+#content {
+  display:flex;
+  flex-wrap:nowrap;
+}
 /* Navigation */
 #nav {
   color:#00061B;
@@ -66,7 +72,7 @@ footer {
 
 .navtabs {
   margin: 10px;
-  flex-grow: 1;
+  flex-grow:1;
   text-align: center;
   list-style-type: none;
   padding-top:20px;

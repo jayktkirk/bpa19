@@ -1,20 +1,22 @@
 
 .text {
- 
   margin:50px;
 }
+
 .text_home {
- 
   margin:50px;
 }
+
 #map {
   height:500px;
   width:500px;
 }
+
 @font-face {
   font-family: signal-heavy;
   src: url(fonts/Signal-Heavy.ttf);
 }
+
 #heading {
  
 }
@@ -27,6 +29,7 @@ body {
 a {
   text-decoration: none;
 }
+
 .slides {
 	display:none;
  
@@ -34,13 +37,18 @@ a {
 p {
 	font-size:15px;
 }
+
 .head {
   font-size:48px;
   color:white;
   font-style:bold;
 }
-.header {
-  font-weight:100;
+
+footer {
+  text-align:center;
+  background-color:#00061B;
+  color:#D2BE96;
+  padding:5px;
 }
 /* Navigation */
 #nav {

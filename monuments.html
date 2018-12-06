@@ -16,7 +16,7 @@
            <li> <img src="images/bpalogo.png"></li>
           <li class="navtabs"><a id="navtabs" href="index.html">Home</a></li>
           <li class="navtabs"><a id="navtabs" href="#">Convention Information</a></li>
-          <li class="navtabs"><a id="navtabs" href="monuments.html">Monuments</a></li>
+          <li class="navtabs"><a id="navtabs" href="monuments.html">Monuments &amp; Memorials</a></li>
           <li class="navtabs"><a id="navtabs" href="#">Restaurants</a></li>
           <li class="navtabs"><a id="navtabs" href="#">Hotels</a></li>
           <li class="navtabs"><a id="navtabs" href="#">Transportation</a></li>
@@ -28,23 +28,31 @@
     <div id="heading">
         <div class="w3-content w3-section" style="max-width:1000px">
           <img src = "images/monument.jpg" style="width:100%">
-          <div class = "w3-display-middle">
-            <p class="head">Monuments</p>
+          <div class = "w3-display-middle" class="header">
+            <p class="head">Monuments &amp; Memorials </p>
           </div>
         </div>
     </div>
-
+    <section>
+    </section>
     <section class = "text">
       <p>
       <ol>
-        <li>White House<br/>1600 Pensylvania Ave NW, Washington D.C. 20500<br/>Tours must be set up between 14 to 90 days prior to your desired tour day. Tours are free of charge. Requests for tours must go through your member of congress.</li>
-        <li>Arlington National Cemetary<br/>Arlington, VA 22211<br/>Car parking is $2/hour, bus parking is $8/hour<br/>The visitors center offers guided walking tours and trolley tours. Trolley tours are $12/adult $9/senior $6/child. You are also welcome to self-tour at your leisure.<br/>Photographs are welcome, but please refrain from capturing funerals and loved ones visiting grave sites.</li>
-        <li>Washington Monument<br/>2 15th NW, Washignton D.C. 20024<br/>Open 7 days a week from 9am-5pm. You can get free tickets to tour at the visitor center. There are limited spots per tour.</li>
-        <li>Lincoln Memorial<br/>2 Lincoln Memorial Cir NW, Washington D.C. 20037<br/>Open 24/7</li>
-        <li>Thomas Jefferson Memorial<br/>FIND ADDRESS<br/>Open 24/7</li>
-        <li>Smithsonian Institution<br/>1000 Jefferson Drive SW <br/>FIND OUT HOW MANY MUSEAMS AND OTHER INFORMATION</li>
-        <li>The Pentagon<br/>Washington D.C. 22202<br/>Tours from Monday-Thursday 10am-4pm and Friday from 12pm-4pm. Must reserve tours between 14 to 90 days in advance. ABSOLUTELY NO PHOTOS</li>
-        <li>National WWII Memorial<br/>1750 Independence Ave SW, Washington D.C. 20024<br/>Open 24/7</li>
+        <li class="listings--item"><a href="https:www.whitehouse.gov/about-the-white-house/tours-events/" class="listing--name">White House</a><br/>1600 Pensylvania Ave NW, Washington D.C. 20500<br/>Tours must be set up between 14 to 90 days prior to your desired tour day. Tours are free of charge. Requests for tours must go through your member of congress.</li>
+
+        <li class="listings--item"><a href="https:www.arlingtoncemetery.mil/Visit" class="listing--name">Arlington National Cemetary</a><br/>Arlington, VA 22211<br/>Car parking is $2/hour, bus parking is $8/hour<br/>The visitors center offers guided walking tours and trolley tours. Trolley tours are $12/adult $9/senior $6/child. You are also welcome to self-tour at your leisure.<br/>Photographs are welcome, but please refrain from capturing funerals and loved ones visiting grave sites.</li>
+
+        <li class="listings--item"><a href="https:www.nps.gov/wamo/index.htm" class="listing--name">Washington Monument</a><br/>2 15th NW, Washignton D.C. 20024<br/>Open 7 days a week from 9am-5pm. You can get free tickets to tour at the visitor center. There are limited spots per tour.</li>
+
+        <li class="listings--item"><a href="https:www.nps.gov/linc/index.htm" class="listing--name">Lincoln Memorial</a><br/>2 Lincoln Memorial Cir NW, Washington D.C. 20037<br/>Open 24/7</li>
+        
+        <li class='listings--item'><a href="https:www.nps.gov/thje/index.htm" class="listing--name">Thomas Jefferson Memorial</a><br/>FIND ADDRESS<br/>Open 24/7</li>
+        
+        <li class="listings--item"><a href="https:www.si.edu/visit" class="listing--name">Smithsonian Institution</a><br/>1000 Jefferson Drive SW <br/>FIND OUT HOW MANY MUSEAMS AND OTHER INFORMATION</li>
+        
+        <li class="listings--item"><a href="https:pentagontours.osd.mil/Tours/" class="listing--name">The Pentagon</a><br/>Washington D.C. 22202<br/>Tours from Monday-Thursday 10am-4pm and Friday from 12pm-4pm. Must reserve tours between 14 to 90 days in advance. ABSOLUTELY NO PHOTOS</li>
+        
+        <li class="listings--item"><a href="https:www.nps.gov/wwii/index.htm" class="listing--name">National WWII Memorial</a><br/>1750 Independence Ave SW, Washington D.C. 20024<br/>Open 24/7</li>
       </ol>
     </p>
     </section> 
@@ -62,8 +70,41 @@
     </script>
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIGF0x3jXn_SE3PmvYk5e8YTO9bWwa-NI&callback=initMap">
-
-
   </script> 
+  <script>
+      // In the following example, markers appear when the user clicks on the map.
+      // Each marker is labeled with a single alphabetical or numerical character.
+      var labels = '12345678';
+      var labelIndex = 0;
+
+      function initialize() {
+        var WhiteHouse = { lat: 38.8976763, lng: -77.0365 };
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 12,
+          center: WhiteHouse
+        });
+
+        // This event listener calls addMarker() when the map is clicked.
+        google.maps.event.addListener(map, 'click', function(event) {
+          addMarker(event.latLng, map);
+        });
+
+        // Add a marker at the center of the map.
+        addMarker(WhiteHouse, map);
+      }
+
+      // Adds a marker to the map.
+      function addMarker(location, map) {
+        // Add the marker at the clicked location, and add the next-available label
+        // from the array of alphabetical characters.
+        var marker = new google.maps.Marker({
+          position: location,
+          label: labels[labelIndex++ % labels.length],
+          map: map
+        });
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
   </body>
 </html>

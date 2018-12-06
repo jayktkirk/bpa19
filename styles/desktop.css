@@ -36,11 +36,15 @@ p {
 }
 .head {
   font-size:48px;
+  color:white;
+  font-style:bold;
 }
-
+.header {
+  font-weight:100;
+}
 /* Navigation */
 #nav {
-  color:white;
+  color:#00061B;
 
 }
 
@@ -48,17 +52,32 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: row;
-  background-color:black;
+  background-color:;
+  border-bottom:2px solid #ED1C24;
 }
 
 .navtabs {
-  margin: 10px 10px;
+  margin: 10px;
   flex-grow: 1;
   text-align: center;
   list-style-type: none;
+  padding-top:20px;
 }
 
 #navtabs {
   font-family: signal-heavy;
+  font-size:19px;
 }
+/*Content*/
+.listings--item {
+    border-top: 1px solid #bfbfbf;
+    color: grey;
+}
+.listing--name {
+  color:#00061B;
+  font-size:20px;
+}
+
+
+
 
